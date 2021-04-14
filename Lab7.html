@@ -1,0 +1,29 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+Задание 7
+</title>
+<script language="JavaScript">
+function array_build(im, g,a,y) {
+do_ = im.slice(g, a);
+document.write(y + do_ + "<br>");
+return do_; } 
+</script>
+</head>
+<body>
+<script language="JavaScript"> 
+months=new Array("Декабрь","Январь","Февраль","Март","Апрель","Май", "Июнь","Июль","Август","Сентябрь","Октябрь","Спанч Боб");
+summer=new Array();
+summer=months.slice(6,9);
+document.write(summer+"<br>");
+im=new Array(" Башкирский язык", " Казахстанский язык", " Литература", " МатЕМАТика", " ИНФорматика", " Химия");
+document.write("Все предметы: " + im + "<br>");
+document.write("<br>");
+y = array_build(im, 0, 3, "Гуманитарные предметы:");
+document.write("<br>");
+y = array_build(im, 3, 6, "Точные предметы:");
+</script>
+</body>
+</html>

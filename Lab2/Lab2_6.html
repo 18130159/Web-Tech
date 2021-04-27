@@ -1,0 +1,130 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+Задание 6
+</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+div.cell{
+display: table-cell; }
+div.row{
+display: table-row; }
+label{
+margin: 2px 2px 2px 2px; }
+</style>
+<script>
+var a=0;
+var b=0;
+var c=0;
+var d=0;
+$(document).ready(function () {
+$(".cquest").on("click", function () {
+var value = $("input[name='radio']:checked").val();
+switch(value){
+case "1":
+a++;
+break;
+case "2":
+b++;
+break;
+case "3":
+c++;
+break;
+case "4":
+d++;
+break; }
+max=a+b+c+d;
+h1=a/max*100;
+h2=b/max*100;
+h3=c/max*100;
+h4=d/max*100;
+$("#res1").html(a+"; "+h1+"%");
+$("#res2").html(b+"; "+h2+"%");
+$("#res3").html(c+"; "+h3+"%");
+$("#res4").html(d+"; "+h4+"%");
+});
+});
+</script>
+</head>
+<body>
+<div class="body__wrapper">
+<div class="body__header">
+<div class="row">
+<div class="cell">
+<h3>Вопрос:</h3>
+</div>
+</div>
+</div>
+<div class="body_text">
+<div class="row">
+<div class="cell">
+Ответьте на вопрос: Каково ваше моральное состояние?
+</div>
+</div>
+<div class="row">
+<div class="cell">
+<h3> Варианты ответа:
+</h3>
+</div>
+</div>
+</div>
+<div class="body_question">
+<div class="row">
+<div class="cell">
+<input type="radio" id="1" name="radio" value="1">
+<label for="1">1) На уровне грунта</label>
+</div>
+<div class="cell">
+<label>Всего ответов:</label>
+</div>
+<div class="cell">
+<div id="res1">0</div>
+</div>
+</div>
+<div class="row">
+<div class="cell">
+<input type="radio" id="2" name="radio" value="2">
+<label for="2">2) Я углепластик</label>
+</div>
+<div class="cell">
+<label>Всего ответов на вопрос:</label>
+</div>
+<div class="cell">
+<div id="res2">0</div>
+</div>
+</div>
+<div class="row">
+<div class="cell">
+<input type="radio" id="3" name="radio" value="3">
+<label for="3">3) Получаю охлаждение</label>
+</div>
+<div class="cell">
+<label for="3">Всего ответов на вопрос:</label>
+</div>
+<div class="cell">
+<div id="res3">0</div>
+</div>
+</div>
+<div class="row">
+<div class="cell">
+<input type="radio" id="4" name="radio" value="4">
+<label for="4">4) Потрачено</label>
+</div>
+<div class="cell">
+<label>Всего ответов:</label>
+</div>
+<div class="cell">
+<div id="res4">0</div>
+</div>
+</div>
+<div class="row">
+<div class="cell">
+<button class="cquest" id="idquest" value="quest">Ответить</button>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

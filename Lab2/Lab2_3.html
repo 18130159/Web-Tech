@@ -1,0 +1,76 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+Задание 3
+</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+div.button{
+display: inline-block;
+}
+input{
+background: pink;
+border-color: gray;
+color: gray;
+width: 160px;
+height: 40px;
+font-size: 16px;
+}
+#control_image{
+position: absolute;
+top: 100px;
+left: 100px;
+background: gray;
+width: 160px;
+height: 40px;
+}
+</style>
+</head>
+<body>
+<script>
+$(document).ready(function () {
+$("#left").on("click", function () {
+if($("#control_image").css("left")==="0px"){
+$("#control_image").css("left", "100px");
+}
+$("#control_image").css("left", "-=100px");
+});
+$("#right").on("click", function () {
+$("#control_image").css("left", "+=100px");
+});
+$("#up").on("click", function () {
+if($("#control_image").css("top")==="100px"){
+$("#control_image").css("top", "200px");
+}
+$("#control_image").css("top", "-=100px");
+});
+$("#down").on("click", function () {
+$("#control_image").css("top", "+=100px");
+});
+});
+</script>
+<div class="body__wrapper">
+<div class="buttons">
+<div class="button">
+<input type="button" value="Налево" id="left" size="32">
+</div>
+<div class="button">
+<input type="button" value="Направо" id="right">
+</div>
+<div class="button">
+<input type="button" value="Вверх" id="up">
+</div>
+<div class="button">
+<input type="button" value="Вниз" id="down">
+</div>
+</div>
+<div class="control_block">
+<div id="control_image">
+<img src="image.gif" alt="">
+</div>
+</div>
+</div>
+</body>
+</html>

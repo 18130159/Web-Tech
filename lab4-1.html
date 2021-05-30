@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<script src="jquery-ui.js"></script>
+<title>ХДМ</title>
+	<meta charset="utf-8">
+</head>
+ <body>
+	<h1>Лабораторная работа №4</h1>
+    <h3>Заказывайте наборы роллов!</h3> 
+
+    <span id="accordion">
+      <h3>Сет Гуд</h3> <div>
+      <p>1) Ролл Запеченный Лава краб (краб сурими с соусом спайси, сливочный сыр, соус хондаши, рис, нори) <br>
+
+		2) Ролл Цезарь (курица холодного копчения, пекинская капуста, соус цезарь, рис, нори, кунжут)<br>
+		
+		3) Ролл Мясной 1/2 порции (бекон, огурцы, острый соус спайси, сливочный сыр, рис, нори)<br>
+		
+		4) Ролл Запеченный Бристоль 1/2 порции (курица холодного копчения, сыр сливочный, острый соус спайси, нори)<br>
+		
+		В вес входит: имбирь 30 г, васаби 10 г, соевый соус 60 мл.<br>
+		
+		Пищевая ценность на 100 г: 188,8 ккал. Белки - 7,1 г, жиры - 8,0 г, углеводы - 22,1 г. <br></p>
+      </div> 
+      <h3>Сет Ривьера</h3> <div>
+      <p>1) Ролл Чеддер-помидор (краб сурими, сыр сливочный, помидор, острый соус спайси, сыр чеддер, рис, нори)<br>
+
+		2) Ролл Жаренный Цезарь (курица холодного копчения, пекинская капуста, помидор, соус цезарь, кляр, сухари, унаги, кунжут, рис, нори)<br>
+		
+		3) Ролл Запеченный Лава Краб  (краб сурими, сыр сливочный, соус хондаши, рис, нори)<br>
+		
+		4) Ролл Кампаи (огурец, помидор, спаржа соевая, шампиньоны, лук зеленый, соус свит чили, кунжут, рис, нори)<br>
+		
+		5) Ролл Запеченный Сарада (краб сурими, сыр сливочный, окунь в кляре, пекинская капуста, соус свит чили, лук зеленый, кляр, сухари, рис, нори, кунжут)<br>
+		
+		В вес входит: имбирь 60 г, васаби 20 г, соевый соус 60 мл.<br>
+		
+		Пищевая ценность на 100 г: 157,2 ккал. Белки - 6,8 г, жиры - 4,9 г, углеводы - 21,5 г.</p>
+      </div> 
+      <h3>Сет Корпоративчик</h3> <div>
+      <p>1) Шеф ролл Запеченный Кунсан (бекон, сыр сливочный, помидор, лук зеленый, соус унаги, кунжут, соус сырный, рис, нори)<br>
+
+		2) Ролл Филадельфия лайт 1/2 порции  (лосось, сыр сливочный, рис, нори, огурец)<br>
+		
+		3) Ролл Запеченный Лава Краб (краб сурими, соус хондаши, сыр сливочный, рис, нори)<br>
+		
+		4) Ролл Запеченный Сарада (окунь в кляре, краб сурими, сыр сливочный, пекинская капуста, соус свит чили, лук зеленый, кляр, сухари, рис, нори, кунжут)<br>
+		
+		5) Ролл Запеченный Бристоль (курица холодного копчения, сыр сливочный, острый соус спайси, рис, нори)<br>
+		
+		6) Ролл Жареный с крабом (крабовый замес сурими, сыр сливочный, унаги, кунжут, сухари, кляр, рис, нори)<br>
+		
+		7) Ролл Жареный Япошка Биг (курица холодного копчения, омлет, лук зеленый, сыр сливочный, кляр, унаги, сухари, рис, нори)<br>
+		
+		8) Ролл С курицей и омлетом 1/2 порции (курица холодного копчения, сыр сливочный, омлет, помидор, кунжут, рис, нори)<br>
+		
+		В вес входит: имбирь 90 г, васаби 30 г, соевый соус 90 мл.<br>
+		
+		Пищевая ценность на 100 г: 185,2 ккал. Белки - 7,5 г, жиры - 7,6 г, углеводы - 21,8 г.</p>
+	</div> 
+      </span><br>
+
+<div id="tabs" style="width: 40%;"> <ul> 
+  <li><a href="#tabs-1">Сет Гуд</a></li> 
+  <li><a href="#tabs-2">Сет Ривьера</a></li> 
+  <li><a href="#tabs-3">Сет Корпоративчик</a></li> </ul> 
+  <div id="tabs-1"> <h2>Сет Гуд</h2> 
+    <img src="https://radugavkusaufa.ru/storage/products/.thumbs/preview500x385_gud-set.jpg" alt="" style=" width: 90%;">
+    <p><br>
+      <span style="font-weight: bold;">Стоимость:</span> 699 рублей <br><br>
+      <button id="btn1">Заказать</button></p> 
+    </div> 
+  <div id="tabs-2"> <h2>Сет Ривьера</h2> 
+    <img src="https://radugavkusaufa.ru/storage/products/.thumbs/preview500x385_rivera.jpg" alt="" style=" width: 90%;">
+    <p><br>
+      <span style="font-weight: bold;">Стоимость:</span> 825 рублей <br><br>
+      <button id="btn2">Заказать</button></p> 
+    </div>
+   <div id="tabs-3"> <h2>Сет Корпоративчик</h2> 
+    <img src="https://radugavkusaufa.ru/storage/products/.thumbs/preview500x385_e04tgayzamm.jpg" alt="" style=" width: 90%;">
+    <p><br>
+      <span style="font-weight: bold;">Стоимость:</span> 1449 рублей <br><br>
+      <button id="btn3">Заказать</button></p> 
+    </div> 
+  </div>
+  <div id="dialog1" title="Заказать Сет Гуд">
+    <form action="">
+      ФИО: <input type="text"><br><br>
+      Количество сетов: <p style="display: inline;" id="sliderValue1"></p>
+      <br><br>
+      <div id="slider1" style="width: 100%;"></div> <br>
+      Дата доставки:  <input type="text"  class="date"><br><br>
+      Город доставки: <input type="text"  class="city"><br><br>
+      Адрес: <input type="text"><br><br>
+	  Квартира: <input type="text"><br><br>
+	  Количество персон: <input type="text"><br><br>
+      Промо-код: <input type="text" title="Копите баллы, меняйте их на промо-коды!" ><br><br>
+     Итоговая цена: <input type="text"id="price1"><br><br>
+    </form>
+    <input type="button" class="puy" value="Купить">
+  </div>
+  <div id="dialog2" title="Заказать Сет Ривьера">
+    <form action="">
+      ФИО: <input type="text"><br><br>
+      Количество: <p style="display: inline;" id="sliderValue2"></p>
+      <br><br>
+      <div id="slider2" style="width: 100%;"></div> <br>
+      Дата доставки:  <input type="text"  class="date"><br><br>
+      Город доставки: <input type="text"  class="city"><br><br>
+      Адрес: <input type="text"><br><br>
+	  Квартира: <input type="text"><br><br>
+	  Количество персон: <input type="text"><br><br>
+      Промо-код: <input type="text" title="Копите баллы, меняйте их на промо-коды!" ><br><br>
+     Итоговая цена: <input type="text" id="price2"><br><br>
+    </form>
+    <input type="button" class="puy" value="Купить">
+  </div>
+  <div id="dialog3" title="Купить товар Набор «Магия Карите»">
+    <form action="">
+      ФИО: <input type="text"><br><br>
+      Количество: <p style="display: inline;" id="sliderValue3"></p>
+      <br><br>
+      <div id="slider3" style="width: 100%;"></div> <br>
+      Дата доставки:  <input type="text"  class="date"><br><br>
+      Город доставки: <input type="text"  class="city"><br><br>
+      Адрес: <input type="text"><br><br>
+	  Квартира: <input type="text"><br><br>
+	  Количество персон: <input type="text"><br><br>
+      Промо-код: <input type="text" title="Копите баллы, меняйте их на промо-коды!" ><br><br>
+     Итоговая цена: <input type="text" id="price3"><br><br>
+    </form>
+    <input type="button" class="puy" value="Купить">
+    <div class="dia" title="Подтверждение заказа">Ваш выбор верен?</div>
+    <div class="yes" title="Заказ принят">Спасибо за заказ! Ожидайте курьра</div>
+  </div>
+      <script type="text/javascript">
+        $(function(){
+          $( function() {
+    $( document ).tooltip();
+  } );
+
+  $(".puy" ).click(function(){
+		$('.dia').dialog('open'); })
+	$('.dia').dialog({ autoOpen: false, width: 300, buttons:{
+        "да": function(){ $( ".yes" ).dialog('open'),$('.dia').dialog('close');   }
+    }})
+	$( ".yes" ).dialog({autoOpen: false, width: 300}); 
+
+          $("#accordion" ).accordion({  collapsible: true });  
+          $('#tabs').tabs(); 
+          $('#dialog1').dialog({ autoOpen: false, width: 500 });
+      $('#dialog2').dialog({ autoOpen: false, width: 500 });
+      $('#dialog3').dialog({ autoOpen: false, width: 500 });
+
+        $("#btn1").click(function(){ 
+        $( "#dialog1" ).dialog('open'); 
+      })
+      $("#btn2").click(function(){ 
+        $( "#dialog2" ).dialog('open'); 
+      })
+      $("#btn3").click(function(){ 
+        $( "#dialog3" ).dialog('open'); 
+      })
+      $('#slider1').slider({
+		    min: 1,
+	    	max: 20,
+        change: function (event, ui){
+            var val = $('#slider1').slider('value');
+            $('#sliderValue1').html(val);
+        }
+    });
+    $('#slider2').slider({
+		    min: 1,
+	    	max: 20,
+        change: function (event, ui){
+            var val = $('#slider2').slider('value');
+            $('#sliderValue2').html(val);
+        }
+    });
+    $('#slider3').slider({
+		    min: 1,
+	    	max: 20,
+        change: function (event, ui){
+            var val = $('#slider3').slider('value');
+            $('#sliderValue3').html(val);
+        }
+    });
+    $.datepicker.regional['ru'] = {
+	closeText: 'Закрыть',
+	prevText: 'Предыдущий',
+	nextText: 'Следующий',
+	currentText: 'Сегодня',
+	monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+	monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
+	dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+	dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+	dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+	weekHeader: 'Не',
+	dateFormat: 'dd.mm.yy',
+	firstDay: 1,
+	isRTL: false,
+	showMonthAfterYear: false,
+	yearSuffix: ''
+};
+	$.datepicker.setDefaults( $.datepicker.regional[ "ru" ] );
+		  $(".date").datepicker({ });
+    var city = ["Москва", "Уфа", "Санкт-Петербург", "Казань", "Новосибирск", "Сочи", "Калининград", "Стерлитамак", "Бирск", "Симферополь", "Краснодар", "Красноярск", "Оренбург"]; 
+	  $(".city" ).click(function(){
+		$(".city").autocomplete({ source: city });
+	});
+  $("#price1" ).click(function(){
+    var k = $('#slider1').slider('value');
+    var price = 699*k;
+    document.getElementById('price1').value = price;
+  })
+  $("#price2" ).click(function(){
+    var k = $('#slider2').slider('value');
+    var price = 825*k;
+    document.getElementById('price2').value = price;
+  })
+  $("#price3" ).click(function(){
+    var k = $('#slider3').slider('value');
+    var price = 1449*k;
+    document.getElementById('price3').value = price;
+  })
+  });
+        </script>
+ </body>
+</html>

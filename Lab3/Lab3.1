@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>ХДМ</title>
+
+<script type="text/javascript" src="jquery.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+<h3>Ряд сборных на ЧМ в Риге хотят снять флаги в знак солидарности с Белоруссией</h3>
+
+<p>Президент Федерации хоккея Латвии Айгарс Калвитис рассказал, что несколько команд-участниц чемпионата мира по хоккею в Риге в поддержку Белоруссии решили снять свои флаги, сообщает LSM.</p>
+
+<img src="https://static.newinform.com/uploads/2021/05/28/full-303-1622226002.jpeg" width="400px" alt=""><br>
+
+<br>
+
+<h3>На Кипре снова смягчили коронавирусные ограничения</h3>
+
+<p>На Кипре в очередной раз смягчили действующие из-за пандемии ограничения, сообщает АТОР.</p>
+
+<img src="https://cdn25.img.ria.ru/images/07e5/03/1d/1603353207_0:345:2731:1881_640x0_80_0_0_9af60514c566919d353c4a84a8cae472.jpg.webp" width="400px" alt=""><br>
+
+<br>
+
+<h3>Потерявший ход в Босфоре танкер буксируют к месту якорной стоянки судов </h3>
+
+<p>Предварительной причиной аварии считается "поломка двигателя на танкере"</p>
+
+<img src="https://phototass3.cdnvideo.ru/width/1020_b9261fa1/tass/m2/uploads/i/20210528/6152649.jpg" width="400px" alt=""><br>
+
+<br>
+
+<h3>Глава МВД Чехии предложил принять закон о компенсации пострадавшим от взрывов во Врбетице </h3>
+
+<p>Данный документ подготовит МВД, заявил Ян Гамчек</p>
+
+<img src="https://phototass2.cdnvideo.ru/width/1020_b9261fa1/tass/m2/uploads/i/20210528/6152579.jpg" width="400px" alt=""><br>
+
+<br>
+
+<h3>ЦСКА уступил турецкому клубу "Анадолу Эфес" и не смог выйти в финал баскетбольной Евролиги </h3>
+
+<p>Армейцы проиграли со счетом 86:89</p>
+
+<img src="https://phototass3.cdnvideo.ru/width/1020_b9261fa1/tass/m2/uploads/i/20210528/6152615.jpg" width="400px" alt=""><br>
+
+<br>
+
+</div>
+
+<script type="text/javascript">
+
+let tek = 5;
+
+function fff(str) {
+
+if (str.length==0) {
+
+document.getElementById("ffff").innerHTML="";
+
+return;
+
+}
+
+if (window.XMLHttpRequest) {
+
+// code for IE7+, Firefox, Chrome, Opera, Safari
+
+xmlhttp=new XMLHttpRequest();
+
+} else { // code for IE6, IE5
+
+xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+
+}
+
+xmlhttp.onreadystatechange=function() {
+
+if (this.readyState==4 && this.status==200) {
+
+document.getElementById("ffff").innerHTML=this.responseText;
+
+}
+
+}
+
+xmlhttp.open("GET","ajax.items.php?tek="+tek,true);
+
+xmlhttp.send();
+
+tek+=5;
+
+}
+
+</script>
+
+<span id = "ffff"></span>
+
+<form>
+
+<input onclick = "fff(this.value)" type="button" value="загрузить" id="b">
+
+</form>
+
+</body>
+
+</html>
+
+ajax.items.php
+
+<?php
+
+// параметры подключения к бд
+
+$db_host = "localhost";
+
+$db_name = "diana";
+
+$db_user = "root";
+
+$db_pass = "root";
+
+// количество новостей на странице
+
+$tek=$_GET["tek"];
+
+// счетчик для загрузки новостей из бд
+
+$count=0;
+
+// соединение с бд
+
+$db = mysqli_connect ($db_host, $db_user, $db_pass, $db_name) or die ("Невозможно подключиться к БД");
+
+mysqli_query ($db, "SET NAMES utf8"); // задаем кодировку данных
+
+// Получаем первые 10 статей, которые будут видны изначально
+
+$res = mysqli_query($db, "SELECT * FROM zadanie ORDER BY id");
+
+// Формируем массив из статей
+
+$arPosts = array();
+
+if ($res){
+
+while($row = mysqli_fetch_assoc($res)){
+
+$arPosts[] = $row;
+
+}
+
+}
+
+foreach ($arPosts as $article):
+
+$count++;
+
+echo '<h3>'.$article['title'].'</h3>';
+
+echo '<p>'.$article['text'].'</p>';
+
+echo '<img src="'.$article['img'].'"><br>';
+
+if($count==$tek)break;
+
+endforeach;
+
+?>
